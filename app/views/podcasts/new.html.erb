@@ -1,0 +1,53 @@
+<h1>New Podcast</h1>
+
+<%= form_for :podcast, url: podcasts_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
+
+<%# 
+
+When you call form_for, you pass it an identifying object for this form. 
+In this case, it's the symbol :podcast. 
+This tells the form_for helper what this form is for. 
+Inside the block for this method, the FormBuilder object 
+- represented by f - is used to build two labels and two text fields,
+one each for the title and text of a podcast. 
+Finally, a call to submit on the f object will create a submit button for the form.
+
+There's one problem with this form though. If you inspect the HTML that is generated, 
+by viewing the source of the page, you will see that 
+the action attribute for the form is pointing at /articles/new. 
+This is a problem because this route goes to the very page that you're on right at the moment,
+and that route should only be used to display the form for a new article.
+
+The form needs to use a different URL in order to go somewhere else. 
+This can be done quite simply with the :url option of form_for. 
+Typically in Rails, the action that is used for new form submissions like this is called "create", 
+and so the form should be pointed to that action.
+
+The articles_path helper tells Rails to point the form to the URI Pattern 
+associated with the articles prefix; and the form will (by default) send a POST request to that route. 
+This is associated with the create action of the current controller, the PodcastsController.
+
+You now need to create the create action within the ArticlesController for this to work.
+
+When a form is submitted, the fields of the form are sent to Rails as parameters. 
+These parameters can then be referenced inside the controller actions, 
+typically to perform a particular task.
+
+%>
+

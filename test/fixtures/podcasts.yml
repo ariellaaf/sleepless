@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  episode: MyString
-  speaker: MyString
+  title: MyString
+  text: MyText
 
 two:
-  episode: MyString
-  speaker: MyString
+  title: MyString
+  text: MyText
