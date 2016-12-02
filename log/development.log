@@ -3474,3 +3474,34 @@ Processing by PodcastsController#index as HTML
 Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 23:22:14 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 56ms (Views: 45.0ms | ActiveRecord: 5.2ms)
+
+
+Started DELETE "/podcasts/1" for 78.192.166.54 at 2016-12-02 23:22:20 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5paJnR6/YtI1OVVjxK+WHlFVMwisw4nkhs/grgWclLU3pE4Rv4pW/WbwGz++VdY/0ngIHkoUyZAW0bW88Rl7uQ==", "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "podcasts" WHERE "podcasts"."id" = $1[0m  [["id", 1]]
+  [1m[35m (74.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://course1-ariellaaf.c9users.io/podcasts
+Completed 302 Found in 82ms (ActiveRecord: 75.5ms)
+
+
+Started GET "/podcasts" for 78.192.166.54 at 2016-12-02 23:22:20 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.4ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.4ms)
+
+

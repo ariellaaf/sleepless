@@ -34,9 +34,16 @@ end
   end
  end
  
+ def destroy
+  @podcast = Podcast.find(params[:id])
+  @podcast.destroy
+
+  redirect_to podcasts_path
+ end
+
  private 
- def podcast_params 
-  params.require(:podcast).permit(:title, :text)
+  def podcast_params 
+   params.require(:podcast).permit(:title, :text)
  end
 
 
