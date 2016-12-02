@@ -4,14 +4,18 @@ class PodcastsController < ApplicationController
   @podcasts = Podcast.all
  end
  
- def new
-  @podcast= Podcast.new
- end
-
  def show
   @podcast = Podcast.find(params[:id])
  end 
  
+ def new
+  @podcast= Podcast.new
+ end
+
+ def edit 
+  @podcast= Podcast.find(params[:id])
+ end
+
  def create
   @podcast = Podcast.new(podcast_params)
     if @podcast.save
@@ -21,6 +25,15 @@ class PodcastsController < ApplicationController
   end
 end
 
+ def update 
+  @podcast = Podcast.find(params[:id])
+  if @podcast.update(podcast_params)
+   redirect_to @podcast
+  else 
+   render 'edit'
+  end
+ end
+ 
  private 
  def podcast_params 
   params.require(:podcast).permit(:title, :text)

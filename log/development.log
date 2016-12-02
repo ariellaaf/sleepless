@@ -2979,3 +2979,498 @@ Can't verify CSRF token authenticity.
 Completed 200 OK in 64ms (Views: 58.4ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/podcasts/new" for 78.192.166.54 at 2016-12-02 21:15:00 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#new as HTML
+  Rendering podcasts/new.html.erb within layouts/application
+  Rendered podcasts/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 197ms (Views: 47.0ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 21:15:14 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 133ms (Views: 30.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 21:17:47 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (125.0ms)
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `podcast' for #<#<Class:0x007ff2a253aab0>:0x007ff2a25d1eb0>
+Did you mean?  podcast_url
+               @podcasts):
+     7:     <th colspan="2"></th>
+     8:   </tr>
+     9:  
+    10: <td><%= link_to 'New', new_podcast_path(podcast) %></td>
+    11: 
+    12:   <% @podcasts.each do |podcast| %>
+    13:     <tr>
+  
+app/views/podcasts/index.html.erb:10:in `_app_views_podcasts_index_html_erb__2735185486235923846_70340041413720'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.3ms)
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 21:19:54 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (203.7ms)
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `podcast' for #<#<Class:0x007ff2a253aab0>:0x007ff290092ab0>
+Did you mean?  podcast_url
+               @podcasts):
+     7:     <th colspan="2"></th>
+     8:   </tr>
+     9:  
+    10: <td><%= link_to 'New', new_podcasts_path(podcast) %></td>
+    11: 
+    12:   <% @podcasts.each do |podcast| %>
+    13:     <tr>
+  
+app/views/podcasts/index.html.erb:10:in `_app_views_podcasts_index_html_erb__2735185486235923846_70339887667860'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.9ms)
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 21:20:40 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.7ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (132.1ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `podcast' for #<#<Class:0x007ff2a253aab0>:0x00000003520938>
+Did you mean?  podcast_url
+               @podcasts):
+     7:     <th colspan="2"></th>
+     8:   </tr>
+     9:  
+    10: <td><%= link_to 'New', new_podcast_path(podcast) %></td>
+    11: 
+    12:   <% @podcasts.each do |podcast| %>
+    13:     <tr>
+  
+app/views/podcasts/index.html.erb:10:in `_app_views_podcasts_index_html_erb__2735185486235923846_27885640'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.0ms)
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 21:21:42 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.7ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (158.1ms)
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `podcast' for #<#<Class:0x007ff2a253aab0>:0x00000004a29b40>
+Did you mean?  podcast_url
+               @podcasts):
+     7:     <th colspan="2"></th>
+     8:   </tr>
+     9:  
+    10: <td><%= link_to 'New', new_podcast_path(podcast) %></td>
+    11: 
+    12:   <% @podcasts.each do |podcast| %>
+    13:     <tr>
+  
+app/views/podcasts/index.html.erb:10:in `_app_views_podcasts_index_html_erb__2735185486235923846_38886420'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.6ms)
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 21:23:01 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 166ms (Views: 163.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/podcasts/1/edit" for 78.192.166.54 at 2016-12-02 21:23:31 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering podcasts/edit.html.erb within layouts/application
+  Rendered podcasts/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 183ms (Views: 178.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/podcasts" for 78.192.166.54 at 2016-12-02 21:23:37 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.4ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/podcasts/2" for 78.192.166.54 at 2016-12-02 21:23:39 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering podcasts/show.html.erb within layouts/application
+  Rendered podcasts/show.html.erb within layouts/application (139.1ms)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `podcast' for #<#<Class:0x007ff2a253aab0>:0x007ff29c00e358>
+Did you mean?  @podcast):
+     8:   <%= @podcast.text %>
+     9: </p>
+    10: 
+    11: <%= link_to 'Edit', edit_podcast_path(podcast) %>
+    12: <%= link_to 'Back', podcasts_path %>
+  
+app/views/podcasts/show.html.erb:11:in `_app_views_podcasts_show_html_erb___2896102313580126305_70339988059800'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.0ms)
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 21:28:16 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.8ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/podcasts/2" for 78.192.166.54 at 2016-12-02 21:28:18 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering podcasts/show.html.erb within layouts/application
+  Rendered podcasts/show.html.erb within layouts/application (132.9ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `podcast' for #<#<Class:0x007ff2a253aab0>:0x00000002b0d720>
+Did you mean?  @podcast):
+     8:   <%= @podcast.text %>
+     9: </p>
+    10: 
+    11: <%= link_to 'Edit', edit_podcast_path(podcast) %>
+    12: <%= link_to 'Back', podcasts_path %>
+  
+app/views/podcasts/show.html.erb:11:in `_app_views_podcasts_show_html_erb___2896102313580126305_22638860'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.7ms)
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 21:28:45 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 162ms (Views: 159.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/podcasts/1/edit" for 78.192.166.54 at 2016-12-02 21:28:46 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPodcast Load (1.2ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering podcasts/edit.html.erb within layouts/application
+  Rendered podcasts/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 35ms (Views: 31.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/podcasts/1" for 78.192.166.54 at 2016-12-02 21:28:48 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering podcasts/show.html.erb within layouts/application
+  Rendered podcasts/show.html.erb within layouts/application (275.0ms)
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `podcast' for #<#<Class:0x007ff2a253aab0>:0x007ff290017a40>
+Did you mean?  @podcast):
+     8:   <%= @podcast.text %>
+     9: </p>
+    10: 
+    11: <%= link_to 'Edit', edit_podcast_path(podcast) %>
+    12: <%= link_to 'Back', podcasts_path %>
+  
+app/views/podcasts/show.html.erb:11:in `_app_views_podcasts_show_html_erb___2896102313580126305_70339988996660'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.4ms)
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 21:29:39 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.4ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 115ms (Views: 113.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/podcasts/1" for 78.192.166.54 at 2016-12-02 21:29:41 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering podcasts/show.html.erb within layouts/application
+  Rendered podcasts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 182ms (Views: 179.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 21:30:30 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 125ms (Views: 122.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/podcasts/new" for 78.192.166.54 at 2016-12-02 21:30:32 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#new as HTML
+  Rendering podcasts/new.html.erb within layouts/application
+  Rendered podcasts/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/podcasts" for 78.192.166.54 at 2016-12-02 21:30:39 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/podcasts/2" for 78.192.166.54 at 2016-12-02 21:30:40 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering podcasts/show.html.erb within layouts/application
+  Rendered podcasts/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/podcasts/2/edit" for 78.192.166.54 at 2016-12-02 21:30:43 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering podcasts/edit.html.erb within layouts/application
+  Rendered podcasts/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/podcasts/2" for 78.192.166.54 at 2016-12-02 21:30:45 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8mBQzhoOxPXGyJsy7LMJmFohHjF6GL6+LWValJ2993qW9GGbdVcmraLx/Hm8nTPsjX4G2N9fYLqun11cIFJFUA==", "podcast"=>{"title"=>"jnghnm ", "text"=>"n"}, "commit"=>"Save Podcast", "id"=>"2"}
+Can't verify CSRF token authenticity.
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to https://course1-ariellaaf.c9users.io/podcasts/2
+Completed 302 Found in 85ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/podcasts/2" for 78.192.166.54 at 2016-12-02 21:30:45 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering podcasts/show.html.erb within layouts/application
+  Rendered podcasts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/podcasts" for 78.192.166.54 at 2016-12-02 21:30:48 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 98ms (Views: 96.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 22:18:05 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/podcasts" for 78.192.166.54 at 2016-12-02 23:05:09 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.7ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 23:11:56 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 23:11:58 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/podcasts/" for 78.192.166.54 at 2016-12-02 23:12:07 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/podcasts/2" for 78.192.166.54 at 2016-12-02 23:12:08 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPodcast Load (0.4ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering podcasts/show.html.erb within layouts/application
+  Rendered podcasts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/podcasts" for 78.192.166.54 at 2016-12-02 23:12:11 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.4ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/podcasts/1/edit" for 78.192.166.54 at 2016-12-02 23:12:12 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering podcasts/edit.html.erb within layouts/application
+  Rendered podcasts/_form.html.erb (3.7ms)
+  Rendered podcasts/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/podcasts" for 78.192.166.54 at 2016-12-02 23:12:15 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.5ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/podcasts/new" for 78.192.166.54 at 2016-12-02 23:12:16 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#new as HTML
+  Rendering podcasts/new.html.erb within layouts/application
+  Rendered podcasts/_form.html.erb (3.5ms)
+  Rendered podcasts/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/podcasts" for 78.192.166.54 at 2016-12-02 23:12:18 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.4ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/podcasts/2/edit" for 78.192.166.54 at 2016-12-02 23:12:20 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPodcast Load (0.3ms)[0m  [1m[34mSELECT  "podcasts".* FROM "podcasts" WHERE "podcasts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering podcasts/edit.html.erb within layouts/application
+  Rendered podcasts/_form.html.erb (2.8ms)
+  Rendered podcasts/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/podcasts" for 78.192.166.54 at 2016-12-02 23:12:23 +0000
+Cannot render console from 78.192.166.54! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PodcastsController#index as HTML
+  Rendering podcasts/index.html.erb within layouts/application
+  [1m[36mPodcast Load (0.6ms)[0m  [1m[34mSELECT "podcasts".* FROM "podcasts"[0m
+  Rendered podcasts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.6ms)
+
+

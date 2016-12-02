@@ -4,13 +4,18 @@
   <tr>
     <th>Title</th>
     <th>Text</th>
+    <th colspan="2"></th>
   </tr>
  
+<td><%= link_to 'New', new_podcast_path(@podcast) %></td>
+
   <% @podcasts.each do |podcast| %>
     <tr>
       <td><%= podcast.title %></td>
       <td><%= podcast.text %></td>
-      <td><%= link_to 'Show', podcasts_path(podcast) %></td>
+      <td><%= link_to 'Show', podcast_path(podcast) %></td>
+      <td><%= link_to 'Edit', edit_podcast_path(podcast) %></td>
+
     </tr>
   <% end %>
 </table>
