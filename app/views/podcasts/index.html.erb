@@ -1,0 +1,16 @@
+<h1>Listing podcasts</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @podcasts.each do |podcast| %>
+    <tr>
+      <td><%= podcast.title %></td>
+      <td><%= podcast.text %></td>
+      <td><%= link_to 'Show', podcasts_path(podcast) %></td>
+    </tr>
+  <% end %>
+</table>
