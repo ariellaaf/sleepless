@@ -8,7 +8,7 @@ development:
   encoding: unicode
   template: template0
 
-test:
+test: &test
   adapter: postgresql
   database: sleepless_database_test
   pool: 5
@@ -52,3 +52,6 @@ production:
 #production:
   #<<: *default
  # database: db/production.sqlite3
+
+cucumber:
+  <<: *test
