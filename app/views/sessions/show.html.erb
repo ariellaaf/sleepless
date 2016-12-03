@@ -1,0 +1,13 @@
+<h1>Which session would you like?</h1>
+<p>
+  <strong>Title:</strong>
+  <%= @session.name %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @session.text %>
+</p>
+
+<%= link_to 'Edit', edit_session_path(@session) %>
+<%= link_to 'Back', sessions_path %>

@@ -1,5 +1,11 @@
 <h1>Hello, Rails!</h1>
 
 
-<%= link_to 'Podcasts', controller: 'podcasts' %>
-<%= link_to 'New podcast', new_podcast_path %>
+<%= link_to 'sessions', controller: 'sessions' %>
+<%= link_to 'New session', new_session_path %>
+
+<%= form_tag("/show", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
