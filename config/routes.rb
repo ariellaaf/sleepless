@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  
+  root 'welcome#index'
   
   get '/sessions/:id' => 'sessions#show'
 
   resources :sessions
   
-  root 'welcome#index'
+  
   
   resources :welcome do 
    resources :mentors do

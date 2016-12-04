@@ -1,5 +1,7 @@
-Feature: home page
+Feature: Homepage
   
-  Scenario: Navigating the home page
-    Given I am on the home page
-    And I should see podcasts
+  Scenario: User is Navigating the home page
+    
+    Given I am on the homepage
+    Then I should see "Mellow"
+    And I should see 

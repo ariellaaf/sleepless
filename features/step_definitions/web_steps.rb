@@ -16,8 +16,6 @@
 # * http://benmabey.com/2008/05/19/imperative-vs-declarative-scenarios-in-user-stories.html
 # * http://dannorth.net/2011/01/31/whose-domain-is-it-anyway/
 # * http://elabs.se/blog/15-you-re-cuking-it-wrong
-#
-
 
 require 'uri'
 require 'cgi'
@@ -30,6 +28,35 @@ module WithinHelpers
   end
 end
 World(WithinHelpers)
+
+
+#examples beginning######
+When(/^I go to the homepage$/) do
+  visit root_path
+end
+
+Then(/^I should see the welcome message$/) do
+  expect(page).to have_content("Mellow")
+end
+
+
+When(/^I click the provided link$/) do
+  click_on "Mentors"
+end
+
+Then(/^I should see the link click confirmation$/) do
+  expect(page).to have_content("Link Clicked")
+end
+########
+
+
+
+
+
+
+
+
+
 
 # Single-line step scoper
 When /^(.*) within (.*[^:])$/ do |step, parent|

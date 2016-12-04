@@ -1,4 +1,5 @@
        Prefix Verb   URI Pattern                  Controller#Action
+       
      sessions GET    /sessions(.:format)          sessions#index
               POST   /sessions(.:format)          sessions#create
   new_session GET    /sessions/new(.:format)      sessions#new
@@ -7,6 +8,7 @@
               PATCH  /sessions/:id(.:format)      sessions#update
               PUT    /sessions/:id(.:format)      sessions#update
               DELETE /sessions/:id(.:format)      sessions#destroy
+              
 welcome_index GET    /welcome(.:format)           welcome#index
               POST   /welcome(.:format)           welcome#create
   new_welcome GET    /welcome/new(.:format)       welcome#new
@@ -15,6 +17,7 @@ welcome_index GET    /welcome(.:format)           welcome#index
               PATCH  /welcome/:id(.:format)       welcome#update
               PUT    /welcome/:id(.:format)       welcome#update
               DELETE /welcome/:id(.:format)       welcome#destroy
+              
       mentors GET    /mentors(.:format)           mentors#index
               POST   /mentors(.:format)           mentors#create
    new_mentor GET    /mentors/new(.:format)       mentors#new
@@ -23,6 +26,7 @@ welcome_index GET    /welcome(.:format)           welcome#index
               PATCH  /mentors/:id(.:format)       mentors#update
               PUT    /mentors/:id(.:format)       mentors#update
               DELETE /mentors/:id(.:format)       mentors#destroy
+              
        topics GET    /topics(.:format)            topics#index
               POST   /topics(.:format)            topics#create
     new_topic GET    /topics/new(.:format)        topics#new
