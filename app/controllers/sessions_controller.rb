@@ -2,50 +2,33 @@ class SessionsController < ApplicationController
 
 
  def index
-  @sessions = session.all
+  @session = Session.all
+  if params[:search]
+   @session = Session.search(params[:search]).order("created_at DESC")
+  else
+   @session = Session.all.order('created_at DESC')
+  end
  end
  
  def show
-  @session = Session.find(params[:id])
+  @session = Session.find_by_id(params[:id])
+ end
+ 
+ def start 
+  @session = Session
  end 
  
- def new
-  @session= session.new
- end
-
- def edit 
-  @session= session.find(params[:id])
- end
-
- def create
-  @session = session.new(session_params)
-    if @session.save
-     redirect_to @session
-    else
-     render 'new'
-  end
-end
-
- def update 
-  @session = session.find(params[:id])
-  if @session.update(session_params)
-   redirect_to @session
-  else 
-   render 'edit'
-  end
+ def title
  end
  
- def destroy
-  @session = session.find(params[:id])
-  @session.destroy
-
-  redirect_to sessions_path
- end
+ def self.search
+  
+ end 
 
  private 
   def session_params 
-   params.require(:session).permit(:title, :text)
- end
+   params.require(:session).permit(:title, :description, :minutes)
+  end
 
 
 #A controller is simply a class that is defined 

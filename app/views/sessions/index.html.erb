@@ -6,7 +6,7 @@
     <th>Text</th>
   </tr>
  
-  <% @sessions.each do |session| %>
+  <% @session.each do |session| %>
     <tr>
       <td><%= session.title %></td>
       <td><%= session.text %></td>
@@ -14,3 +14,9 @@
     </tr>
   <% end %>
 </table>
+
+
+<%= form_tag(sessions_path, method: :get) do %>
+  <%= text_field_tag :title, params[:title] %>
+  <%= submit_tag 'Search' %>
+<% end %>

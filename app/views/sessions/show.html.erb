@@ -1,13 +1,16 @@
 <h1>Which session would you like?</h1>
 <p>
   <strong>Title:</strong>
-  <%= @session.name %>
+  <%= @session.try(:title) %>
 </p>
  
 <p>
-  <strong>Text:</strong>
-  <%= @session.text %>
+  <strong>About:</strong>
+  <%= @session.try(:title)%>
+  <%= @session.try(:description)%>
+  <%= @session.try(:topic)%>
+  
 </p>
 
-<%= link_to 'Edit', edit_session_path(@session) %>
-<%= link_to 'Back', sessions_path %>
+<%#= link_to 'Edit', edit_session_path(@session) %>
+<%#= link_to 'Back', sessions_path %>

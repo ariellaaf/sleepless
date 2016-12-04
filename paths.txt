@@ -1,0 +1,34 @@
+       Prefix Verb   URI Pattern                  Controller#Action
+     sessions GET    /sessions(.:format)          sessions#index
+              POST   /sessions(.:format)          sessions#create
+  new_session GET    /sessions/new(.:format)      sessions#new
+ edit_session GET    /sessions/:id/edit(.:format) sessions#edit
+      session GET    /sessions/:id(.:format)      sessions#show
+              PATCH  /sessions/:id(.:format)      sessions#update
+              PUT    /sessions/:id(.:format)      sessions#update
+              DELETE /sessions/:id(.:format)      sessions#destroy
+welcome_index GET    /welcome(.:format)           welcome#index
+              POST   /welcome(.:format)           welcome#create
+  new_welcome GET    /welcome/new(.:format)       welcome#new
+ edit_welcome GET    /welcome/:id/edit(.:format)  welcome#edit
+      welcome GET    /welcome/:id(.:format)       welcome#show
+              PATCH  /welcome/:id(.:format)       welcome#update
+              PUT    /welcome/:id(.:format)       welcome#update
+              DELETE /welcome/:id(.:format)       welcome#destroy
+      mentors GET    /mentors(.:format)           mentors#index
+              POST   /mentors(.:format)           mentors#create
+   new_mentor GET    /mentors/new(.:format)       mentors#new
+  edit_mentor GET    /mentors/:id/edit(.:format)  mentors#edit
+       mentor GET    /mentors/:id(.:format)       mentors#show
+              PATCH  /mentors/:id(.:format)       mentors#update
+              PUT    /mentors/:id(.:format)       mentors#update
+              DELETE /mentors/:id(.:format)       mentors#destroy
+       topics GET    /topics(.:format)            topics#index
+              POST   /topics(.:format)            topics#create
+    new_topic GET    /topics/new(.:format)        topics#new
+   edit_topic GET    /topics/:id/edit(.:format)   topics#edit
+        topic GET    /topics/:id(.:format)        topics#show
+              PATCH  /topics/:id(.:format)        topics#update
+              PUT    /topics/:id(.:format)        topics#update
+              DELETE /topics/:id(.:format)        topics#destroy
+         root GET    /                            welcome#index
