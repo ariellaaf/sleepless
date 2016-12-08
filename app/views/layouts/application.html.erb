@@ -4,9 +4,45 @@
   <head>
     <title>Mellow</title>
     <%= csrf_meta_tags %>
+
  </head>
 
   <body>
+    <%= render 'shared/navigation' %>
+     
+     <div id="main-container" class="container">
+       <div class="row">
+         <div class="col-xs-3">
+           <h3>Mellow</h3>
+         </div>
+       </div>
+     </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-9">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="row">
+            <div class="col-xs-6"></div>
+            <div class="col-xs-6"></div>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="row">
+            <div class="col-xs-6"></div>
+            <div class="col-xs-6"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <table class="table">
+      ...
+    </table>
+
     <%= yield %>
   </body>
 </html>

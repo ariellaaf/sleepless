@@ -1,20 +1,29 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
   
-  get '/sessions/:id' => 'sessions#show'
-
+  root to: 'welcome#index'
+  
+  
+  
+  resources :welcome 
+  resources :mentors
+  resources :topics
+  resources :podcasts
   resources :sessions
   
-  
+  #get '/sessions/:id' => 'sessions#show' 
   
   resources :welcome do 
-   resources :mentors do
-       
-      resources :topics
-   end 
+   get 'session'
+   get 'mentors'
    
+
+       
+
+   end 
+    
 end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  end 
+  
+  
   
 

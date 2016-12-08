@@ -1,6 +1,9 @@
 class WelcomeController < ApplicationController
   def index
+    render('/home')
   end
-  layout "index"
+ 
+  def home
+  end
   
 end

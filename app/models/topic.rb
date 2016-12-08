@@ -1,3 +1,3 @@
 class Topic < ApplicationRecord
- has_many :mentors, :sessions
+ has_many :sessions 
 end
