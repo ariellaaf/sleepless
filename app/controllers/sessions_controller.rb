@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
  #belongs_to :mentor 
 #end
+  layout 'application'
+
 
  def index
   @sessions = Session.all
