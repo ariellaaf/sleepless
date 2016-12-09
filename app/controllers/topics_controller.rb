@@ -1,24 +1,21 @@
-class SessionsController < ApplicationController
- #belongs_to :mentor 
-#end
-  layout 'application'
+class TopicsController < ApplicationController
 
 
  def index
-  @sessions = Session.all
+  @topics = Topic.all
   if params[:search]
-   @session = Session.search(params[:search]).order("created_at DESC")
+   @topic = Topic.search(params[:search]).order("created_at DESC")
   else
-   @session = Session.all.order('created_at DESC')
+   @topic = Topic.all.order('created_at DESC')
   end
  end
  
  def show
-  @session = Session.find_by_id(params[:id])
+  @topic = Topic.find_by_id(params[:id])
  end
  
  def start 
-  @session = Session
+  @topic = Topic
  end 
  
  def title
@@ -29,8 +26,8 @@ class SessionsController < ApplicationController
  end 
 
  private 
-  def session_params 
-   params.require(:session).permit(:title, :description, :minutes)
+  def topic_params 
+   params.require(:topic).permit(:title, :description, :minutes)
   end
 
 

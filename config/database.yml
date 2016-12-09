@@ -2,6 +2,7 @@
 development:
   adapter: postgresql
   database: sleepless_database_development
+  encoding: utf8
   pool: 5
   timeout: 5000
   

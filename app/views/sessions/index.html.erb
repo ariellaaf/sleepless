@@ -1,22 +1,146 @@
-<h1></h1>
- 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
-  <% @session.each do |session| %>
-    <tr>
-      <td><%= session.title %></td>
-      <td><%= session.text %></td>
-      <td><%= link_to 'Search', session_path(session) %></td>
-    </tr>
-  <% end %>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mellow Sessions</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/framework_dw.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../css/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="../css/grayscale.css">
+    
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> Menu <em class="fa fa-bars"></em></button>
+                <a class="navbar-brand page-scroll" href="../home.html"> <em class="fa fa-play-circle"></em> Be present<br>
+                </a></div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#start">Start</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                      <h1 class="brand-heading">Sessions</h1>
+                      <p class="intro-text">Take a moment to be mindful </p>
+                      <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!--  SECTION-1 -->
+<div id="start">
+<section>
+  <div class="row">
+    <div class="col-lg-12 page-header text-center">
+      <h2>Meditations</h2>
+    </div>
+  </div>
+	</section> 
+	 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-12 text-center"> <img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="../img/breathe.gif" data-holder-rendered="true">
+        <h3>Breathing</h3>
+        <p>5  minutes</p>
+                      <p><a class="btn btn-default" href="Mellow/session/id">Start »</a></p>
+
+      </div>
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="../img/breath_sounds.gif" data-holder-rendered="true">
+        <h3>Breath, sound, body </h3>
+        <p>12  minutes   </p>
+              <p><a class="btn btn-default" href="Mellow/session/id">Start »</a></p>
+		</div>
+     
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="../img/complete.gif" data-holder-rendered="true">
+        <h3>Complete Meditation</h3>
+        <p>20  minutes   </p>
+                      <p><a class="btn btn-default" href="Mellow/session/id">Start »</a></p>
+
+      </div>
+      
+       <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="../img/kind.gif" data-holder-rendered="true">
+        <h3>Loving kindness</h3>
+        <p>9 minutes</p>
+                      <p><a class="btn btn-default" href="Mellow/session/id">Start »</a></p>
+
+      </div>
+      
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="../img/body_scan.gif" data-holder-rendered="true">
+        <h3>Body scan </h3>
+        <p>3  minutes </p>
+                      <p><a class="btn btn-default" href="Mellow/session/id">Start »</a></p>
+
+      </div>
+      
+      <div class="col-lg-4 col-sm-12 text-center"><img class="img-circle" alt="140x140" style="width: 140px; height: 140px;" src="../img/sleep.gif" data-holder-rendered="true">
+        <h3>Sleep well</h3>
+        <p>13  minutes </p>
+                      <p><a class="btn btn-default" href="Mellow/session/id">Start »</a></p>
+
+      </div>
+    </div>
+   
+	</div>
+ </div>
+
+<!-- FOOTER -->
+<div class="container">
+  <div class="row"> </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+          <p>Copyright © Mellow Ari 2016</p>
+        </div>
+    </footer>
 
 
-<%= form_tag(sessions_path, method: :get) do %>
-  <%= text_field_tag :title, params[:title] %>
-  <%= submit_tag 'Search' %>
-<% end %>
+<!-- / FOOTER --> 
+
+</body>
+
+</html>
