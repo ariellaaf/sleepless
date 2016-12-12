@@ -50,6 +50,9 @@ end
 ########
 
 
+When(/^I click on navigation link Mentors$/) do
+  expect(page).to have_content("meet the mentors") # Write code here that turns the phrase above into concrete actions
+end
 
 
 
@@ -76,7 +79,7 @@ When /^(?:|I )go to (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
-When /^(?:|I )press "([^"]*)"$/ do |button|
+When /^(?:|I )click "([^"]*)"$/ do |button|
   click_button(button)
 end
 
@@ -125,9 +128,7 @@ When /^(?:|I )choose "([^"]*)"$/ do |field|
   choose(field)
 end
 
-When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
-  attach_file(field, File.expand_path(path))
-end
+
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
   if page.respond_to? :should
@@ -135,6 +136,11 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   else
     assert page.has_content?(text)
   end
+end
+
+
+When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
+  attach_file(field, File.expand_path(path))
 end
 
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
