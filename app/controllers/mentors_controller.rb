@@ -4,5 +4,12 @@ class MentorsController < ApplicationController
   render('mentors/index') 
  end
  
-end
-
+  def show
+  render('mentors/index') 
+ end
+ 
+ private 
+  def mentor_params 
+   params.require(:mentor).permit(:name, :bio)
+  end
+  end 
